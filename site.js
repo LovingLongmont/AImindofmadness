@@ -47,7 +47,7 @@ if(pageCat){
  }
 }else{
  document.querySelector('.cards').innerHTML=categories.map((c,i)=>`<a class="cat c${i+1}" href="/${c[0]}.html"><div class="cat-photo"></div><div class="cat-info"><span class="cat-icon" aria-hidden="true">${c[3]}</span><h3>${c[1]}</h3><p>${c[2]}</p><span class="arrow" aria-hidden="true">›</span></div></a>`).join('');
- document.querySelector('.feature-image').innerHTML=`<a href="/household.html?product=home-budget" aria-label="View the home budget builder concept">${preview(products[0])}</a>`;
+ document.querySelector('.feature-image').innerHTML=`<a href="/household.html?product=home-budget" aria-label="View the home budget builder concept">${preview(products.find(p=>p.id==='home-budget'))}</a>`;
  document.querySelector('.feature-copy .btn').href='/household.html?product=home-budget';
  document.querySelector('.note')?.remove();
 }
